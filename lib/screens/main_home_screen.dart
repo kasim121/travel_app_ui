@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../widgets/home_bottomnavigationbar.dart';
+
 import 'indiarupee_screen.dart';
 
 class Home extends StatefulWidget {
