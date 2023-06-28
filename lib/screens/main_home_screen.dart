@@ -31,7 +31,7 @@ class _HomeState extends State<Home> {
             Icon(
               Icons.home,
               size: 30,
-              color: ColorManager.grey,
+              color: ColorManager.blue,
             ),
             Text(
               "Home",
@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
           Icon(
         Icons.window,
         size: 30,
-        color: ColorManager.red,
+        color: ColorManager.white,
       ),
       page: const WindowScreen(),
     ),
@@ -129,7 +129,7 @@ class _HomeState extends State<Home> {
       // ),
       body: pages[_pageIndex].page,
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 238, 232, 233),
+        backgroundColor:  const Color.fromRGBO(235, 224, 224, 1),
         key: _bottomNavigationKey,
         index: 0,
         height: 50.h,
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                 ))
             .toList(),
         color: Colors.white,
-        buttonBackgroundColor: Colors.white,
+        buttonBackgroundColor: _pageIndex ==2?Colors.red:Colors.white,
         animationCurve: Curves.easeInOut,
         animationDuration: const Duration(milliseconds: 600),
         onTap: (index) {

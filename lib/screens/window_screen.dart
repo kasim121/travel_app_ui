@@ -21,13 +21,13 @@ class _WindowScreenState extends State<WindowScreen> {
   final int index = 0;
   List<TripDetails> myTripList = [
     TripDetails(textData: "Flight", imageData: ImageAssets.flight),
-    TripDetails(textData: "Hotels", imageData: ImageAssets.flight),
-    TripDetails(textData: "Bus", imageData: ImageAssets.flight),
-    TripDetails(textData: "Holidays", imageData: ImageAssets.flight),
-    TripDetails(textData: "Cruise", imageData: ImageAssets.flight),
-    TripDetails(textData: "Holidays", imageData: ImageAssets.flight),
-    TripDetails(textData: "Train", imageData: ImageAssets.flight),
-    TripDetails(textData: "Visa", imageData: ImageAssets.flight),
+    TripDetails(textData: "Hotels", imageData: ImageAssets.hotel),
+    TripDetails(textData: "Bus", imageData: ImageAssets.bus),
+    TripDetails(textData: "Holidays", imageData: ImageAssets.holidays),
+    TripDetails(textData: "Cruise", imageData: ImageAssets.cruise),
+    TripDetails(textData: "Holidays", imageData: ImageAssets.holidays),
+    TripDetails(textData: "Train", imageData: ImageAssets.train),
+    TripDetails(textData: "Visa", imageData: ImageAssets.visa),
   ];
   List<TicketsOffers> myTicketsOffers = [
     TicketsOffers(
