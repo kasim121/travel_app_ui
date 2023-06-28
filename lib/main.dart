@@ -1,4 +1,4 @@
-import 'package:benzy_itech_app/screens/home_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child:  Home(),
+      child:  const Home(),
     );
   }
    

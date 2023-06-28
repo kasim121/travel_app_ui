@@ -21,7 +21,7 @@ TextStyle getLightTextStyle(
 
 //regular style
 TextStyle getRegularTextStyle(
-    {double fontSize = FontSize.s12, required Color color}) {
+    {double fontSize = FontSize.s10, required Color color}) {
   return _getTextStyle(
       fontSize, FontConstants.fontFamily, FontWeightManager.regular, color);
 }
@@ -39,11 +39,21 @@ TextStyle getSemiBoldTextStyle(
   return _getTextStyle(
       fontSize, FontConstants.fontFamily, FontWeightManager.semiBold, color);
 }
+TextStyle getTripTextStyle(
+    {double fontSize = FontSize.s10, required Color color}) {
+  return _getTextStyle(
+      fontSize, FontConstants.fontFamily, FontWeightManager.semiBold, color);
+}
+TextStyle getMoreServiceStyle(
+    {double fontSize = FontSize.s10, required Color color}) {
+  return _getTextStyle(
+      fontSize, FontConstants.fontFamily, FontWeightManager.semiBold, color);
+}
 
 //bold style
 TextStyle getBoldTextStyle(
-    {double fontSize = FontSize.s16, required Color color}) {
-  print(FontConstants.fontFamily);
+    {double fontSize = FontSize.s14, required Color color}) {
+
   return _getTextStyle(
       fontSize, FontConstants.fontFamily, FontWeightManager.bold, color);
 }

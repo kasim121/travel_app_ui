@@ -1,4 +1,4 @@
-import 'package:benzy_itech_app/resources/asset_manager.dart';
+import 'package:benzy_itech_app/resources/color_manager.dart';
 import 'package:benzy_itech_app/screens/home_screen.dart';
 import 'package:benzy_itech_app/screens/profile_screen.dart';
 import 'package:benzy_itech_app/screens/trip_screen.dart';
@@ -6,8 +6,6 @@ import 'package:benzy_itech_app/screens/window_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-
 
 import 'indiarupee_screen.dart';
 
@@ -20,7 +18,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _pageIndex = 0;
-  GlobalKey _bottomNavigationKey = GlobalKey();
+  final GlobalKey _bottomNavigationKey = GlobalKey();
 
   List pages = [
     MyPage(
@@ -30,10 +28,10 @@ class _HomeState extends State<Home> {
         alignment: Alignment.center,
         child: Column(
           children: [
-            Container(
-              child:
-                  SvgPicture.asset(ImageAssets.home, color: Colors.blue),
-              height: 30.h,
+            Icon(
+              Icons.home,
+              size: 30,
+              color: ColorManager.grey,
             ),
             Text(
               "Home",
@@ -42,7 +40,7 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      page:  HomeScreen(),
+      page: const HomeScreen(),
     ),
     MyPage(
       child:
@@ -51,10 +49,10 @@ class _HomeState extends State<Home> {
         alignment: Alignment.center,
         child: Column(
           children: [
-            Container(
-              child: SvgPicture.asset("assets/icons/trip.svg",
-                  color: Colors.black),
-              height: 30.h,
+            Icon(
+              Icons.business_center,
+              size: 30,
+              color: ColorManager.grey,
             ),
             Text(
               "Trips",
@@ -63,18 +61,18 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      page: TripScreen(),
+      page: const TripScreen(),
     ),
     MyPage(
       child:
           //Icons.window,
 
-          Container(
-        alignment: Alignment.center,
-        child: SvgPicture.asset("assets/icons/window.svg", color: Colors.red),
-        height: 30.h,
+          Icon(
+        Icons.window,
+        size: 30,
+        color: ColorManager.red,
       ),
-      page: WindowScreen(),
+      page: const WindowScreen(),
     ),
     MyPage(
       child:
@@ -84,19 +82,19 @@ class _HomeState extends State<Home> {
         alignment: Alignment.center,
         child: Column(
           children: [
-            Container(
-              child: SvgPicture.asset("assets/icons/profile.svg"),
-              height: 30.h,
+            Icon(
+              Icons.account_circle,
+              size: 30,
+              color: ColorManager.grey,
             ),
-            Container(
-                child: Text(
+            Text(
               "Profile",
               style: TextStyle(color: Colors.black, fontSize: 10.sp),
-            ))
+            )
           ],
         ),
       ),
-      page: ProfileScreen(),
+      page: const ProfileScreen(),
     ),
     MyPage(
       child:
@@ -105,25 +103,25 @@ class _HomeState extends State<Home> {
         alignment: Alignment.center,
         child: Column(
           children: [
-            Container(
-              child: SvgPicture.asset("assets/icons/indiarupee.svg"),
-              height: 30.h,
+            Icon(
+              Icons.currency_rupee,
+              size: 30,
+              color: ColorManager.grey,
             ),
-            Container(
-                child: Text(
+            Text(
               "Recharge",
               style: TextStyle(color: Colors.black, fontSize: 10.sp),
-            ))
+            )
           ],
         ),
       ),
-      page: IndiaRupeeScreen(),
+      page: const IndiaRupeeScreen(),
     ),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white,
       //backgroundColor: Color.fromARGB(255, 238, 230, 233),
       // appBar: AppBar(
       //   title: const Text("Home"),
@@ -131,7 +129,7 @@ class _HomeState extends State<Home> {
       // ),
       body: pages[_pageIndex].page,
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color.fromARGB(255, 238, 232, 233),
+        backgroundColor: const Color.fromARGB(255, 238, 232, 233),
         key: _bottomNavigationKey,
         index: 0,
         height: 50.h,
