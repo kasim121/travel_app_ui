@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               
              Container(
-               height: 290.h,
+               height: 270.h,
                width: double.infinity,
                decoration: BoxDecoration(
                  color: Colors.indigo,
@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                        alignment: Alignment.topRight,
                        child: Padding(
                          padding: const EdgeInsets.only(top: 24.0, right: 16),
-                         child: SvgPicture.asset("assets/icons/menu.svg",
+                         child: SvgPicture.asset("",
                              color: Colors.white),
                        ),
                      ),
@@ -121,110 +121,34 @@ class _HomeScreenState extends State<HomeScreen> {
                  ),
                ),
              ),
-             
-                Positioned(
-                  top: 200.0,
-                  left: 1,
-                  child: Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Container(
-                              height:180.h,
-                              width: 360.h,
-                     decoration: BoxDecoration(
-                              color: Colors.white,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(15.0),
-                            ),
-                          ),
-                     
-                         
-                                 ),
-                  ),
-                )
-     , Positioned(
-      top: 160,
-       child: Padding(
-         padding: const EdgeInsets.only(left:30.0),
-         child: Container(
-          height: 290.h,
-          width: 300,
-           child: GridView.builder(
-                     gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 80,
-            childAspectRatio: 2 / 2,
-            crossAxisSpacing: 5,
-            mainAxisSpacing: 15),
-                     itemCount: 8,
-                     itemBuilder: (BuildContext ctx, index) {
-                       return Column(
-                         mainAxisAlignment: MainAxisAlignment.center,
-                         children: [
-                                CircleAvatar(
-         backgroundColor: Color.fromARGB(255, 246, 246, 193),
-           radius: 25,
-           child: SvgPicture.asset("assets/icons/train.svg"),
-         ),
-                                  const Text('Train',style: TextStyle(color: Colors.black,fontSize: 10),)
-                         ],
-                       );
-                     }),
-         ),
-       ),
-     ),
-           Positioned(
-            top: 360,
-            left: 115,
-             child: Container(
-              height: 35.h,
-               child: TextButton.icon(
-                 style: TextButton.styleFrom(
-                   textStyle: TextStyle(color: Colors.black),
-                   backgroundColor: Color.fromARGB(255, 180, 217, 248),
-                   shape:RoundedRectangleBorder(
-                     borderRadius: BorderRadius.circular(15.0),
-                   ), 
-                 ),
-                 onPressed: () => {},
-                 label: Icon(Icons.arrow_forward_ios,color: Colors.black,size: 20,),
-                 icon: Text('More Services',style: TextStyle(color: Colors.black),),
-               ),
-             ),
-           )
-            , 
-
-              Positioned
-              (
-                top:400,
-                child: Container(
-                height: 200.h,
-                width: double.infinity,
-                color: Colors.pink,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 10,
-                  itemBuilder: (context,i) {
-                    return Card(child: 
-                    
-                    Column(
-                      children: [
-                          Image.network(
-                                    'https://placeimg.com/640/480/any',
-                                    fit: BoxFit.fill,
-                                    height: 100,
-                                    width: 100,
-                                  ),
-                        Text("Test",style: TextStyle(color: Colors.black),),
-                      ],
-                    ));
-                  }
-                ),
-                          ),
-              ),                                     
+    
           ],
            
  
            ),
          ),
        );
+  }
+}
+
+class CommonTextIconButton extends StatelessWidget {
+  const CommonTextIconButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton.icon(
+      style: TextButton.styleFrom(
+        textStyle: const TextStyle(color: Colors.blue),
+        backgroundColor: Colors.white,
+        shape:RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24.0),
+        ), 
+      ),
+      onPressed: () => {},
+      icon: const Icon(Icons.send_rounded,),
+      label: const Text('Top Up Balance',),
+    );
   }
 }

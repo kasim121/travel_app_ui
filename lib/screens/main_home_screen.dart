@@ -1,3 +1,4 @@
+import 'package:benzy_itech_app/resources/asset_manager.dart';
 import 'package:benzy_itech_app/screens/home_screen.dart';
 import 'package:benzy_itech_app/screens/profile_screen.dart';
 import 'package:benzy_itech_app/screens/trip_screen.dart';
@@ -31,7 +32,7 @@ class _HomeState extends State<Home> {
           children: [
             Container(
               child:
-                  SvgPicture.asset("assets/icons/home.svg", color: Colors.blue),
+                  SvgPicture.asset(ImageAssets.home, color: Colors.blue),
               height: 30.h,
             ),
             Text(
@@ -41,7 +42,7 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      page: const HomeScreen(),
+      page:  HomeScreen(),
     ),
     MyPage(
       child:
